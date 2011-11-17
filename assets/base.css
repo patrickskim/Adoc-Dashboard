@@ -1,0 +1,155 @@
+/************************************** 
+
+	THE 
+       oooooo.    .oooooo..o  .oooooo..o 
+	 d8P'  `Y8b  d8P'    `Y8 d8P'    `Y8 
+	888          Y88bo.      Y88bo.      
+	888           `"Y8888o.   `"Y8888o.  
+	888               `"Y88b      `"Y88b 
+	`88b    ooo  oo     .d8P oo     .d8P 
+	 `Y8bood8P'  8""88888P'  8""88888P'   v1.0
+
+	the CSS | Standard Pk Package.  			 
+	Base Style and Formating Copyright © 2010 and beyond!
+
+	Author: Patrick Kim. 
+	
+	If you're looking in here, youre the type of person that 
+	looks under the hood and kick the tires. I can apppreciate that.
+
+***************************************/
+
+/* Reset CSS - [credit: Eric Meyer @ meyerweb.com] */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}a{outline:none}table{border-collapse:collapse;border-spacing:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:400}ol,ul { list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}q:before,q:after{content:''}abbr,acronym,fieldset,img{border:0}html{min-height:100%;height:auto}
+
+/*== Standard Clearfix - [credit: bigjohn design @ positioniseverything.com] ==*/
+	.reset { margin:0; padding:0;	font-weight:400;	text-decoration:none; }
+	.clear { height:0; clear:both;	margin:0;	padding:0;	line-height:0; }
+	.clearfix:after { content: "."; display: block;  height: 0;  clear: both; visibility: hidden;   }
+	
+/*== Custom Classes & Default Settings. ==*/	
+	a {	color:#0077CC; text-decoration:underline; cursor:pointer; }
+	a:hover {	color:#df3d82; cursor:pointer; }
+	a:active {	color:#e0337d; }
+	
+	ul, ol { margin-bottom: 10px; }
+	ul li, ol li { margin-bottom: 5px; }
+	ol li { list-style-type: decimal; margin-left: 20px; }
+	ul.disc li { list-style-type: disc; margin-left: 20px; }
+	ul.circ li { list-style-type: circle; margin-left: 20px; }
+	
+	sup,sub { height: 0; line-height: 1; vertical-align: baseline; position: relative; }
+		sup { bottom: 1ex; }
+		sub { top: .5ex; }
+		
+	hr { border: none; border-top: 1px solid #ccc; clear: both; margin: 10px 0; }	
+	
+	/* General Button Item */
+	.bttn { font-family: "Arial Narrow"; width: auto; text-decoration: none; background: #f4f4f4; border: 1px solid #b9b9b9; color: #222; text-shadow: #fff 0 1px 0; text-align: center; }
+		.bttn:hover { border: 1px solid #61aedc; background: #e8f2fe; color: #0782d0; }
+		.bttn:active { background: #eee; border: 1px solid #aaa; color:#222; margin: 1px 0; }
+
+/*===== Typography Common Elements =====
+	See http://www.alistapart.com/articles/howtosizetextincss 
+	Font Base Pixel = 16px 
+	Font Conversion: 16px 0.875 = 14px 
+*/
+
+body { font-family: 'Open Sans', sans-serif; font-size: 100%; line-height: 1.5em; color:#999; }
+	h1, h2, h3, h4, h5 { margin: 0 0 15px 0; line-height: 1.25em; }
+	h1 { font-size: 2.375em; }
+	h2 { font-size: 1.5em; }
+	h3 { font-size: 1.375em; }
+	h4 { font-size: 1.25em; }
+	h5 { font-size: 1em;  }
+	
+	p, ul {	margin: 0 0 15px 0; font-size:0.875em; }
+	ul li { margin: 0 0 5px 0; }
+	strong { font-weight:700; }
+	.11px { font-size: 0.6875em; }
+	.10px { font-size: 0.625em; }
+	.wrappable { white-space: pre-line; word-wrap: break-word; width: inherit; }
+
+
+/*===== Shared Common Global Items [Potential Candidates for Refactor and breking out into seperate CSS files]=====*/	
+code { font-family: "Courier New"; font-size: 0.75em; padding: 10px; background :#f4f4f4; border-left: 1px solid #ddd; margin: 0 0 20px 0;  display: block; }
+
+body {background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111)); padding: 30px; }
+
+#container { min-width: 800px; }
+
+#count-down { margin: 2% 0; }
+	#bar { width: 100%; position: relative; height: 80px; background: -webkit-gradient(linear, right top, left bottom, from(#333), to(#111)); margin: 0 auto; border-radius: 10px; box-shadow: 0 3px 2px rgba(0,0,0,0.5); } 
+
+	#bar .fill { background: -webkit-gradient(linear, right top, left bottom, from(#5bc816), to(#255209));  width: 30%; height: 100%; position: absolute; top: 0; left: 0;  border-radius: 10px; box-shadow: -3px 3px 2px rgba(0,0,0,0.2);}	
+	#current-sprint-num { font-size: 40px; line-height: 80px; text-align: center; color:#fff; position: relative; z-index: 1; text-shadow: 0 1px 0 rgba(0,0,0,0.5); }
+	#time-left { text-align: center; color:#777; margin: 2% 0;}
+	#time-left strong { color:#fff; }
+
+#status-board-label { margin: 0 0 10px ;}
+	#status-board-label label { font-size: 20px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color:#fff; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); float: left; width: 5%; text-align: center; padding: 0 1.5%; margin-right: 2%; }
+
+	#status-board-label .spacer { height: 20px; float: left; margin-right: 2%; }
+	#status-board-label .avatar {  width: 64px; }
+	#status-board-label .name { width: 30%; padding: 0 2%;}
+
+.alert { padding: 10% 0; text-align: center; margin: 0 0 2% 0; font-size:50px;  }
+	.alert h2 { font: inherit; margin: 2% 0; padding: 0;}
+	.alert .symbol { color: #fbbe16;}
+	.alert strong {  color:#fff;font-weight: bold;  }
+
+	.alert .qa { display: none; }
+	.alert .qa .symbol { color: #d12c1e; }
+
+
+#section { margin: 5% 0; }
+.module-50 { width: 46%; margin-right: 2%; float: left; }
+
+
+#line-up { font-size: 18px;  width: 100%; margin-top: -40px;}
+	#line-up th { padding: 2% 1%; font-size: 18px; font-weight: bold; border-bottom: 2px solid #aaa; }
+	#line-up td { padding: 4% 1%; border-bottom: 1px solid #333; }
+	#line-up td.date { color:#777; }
+	#line-up td.person { font-size: 30px; color:#fff; }
+
+
+ul.timeline { border-left: 3px solid #999; margin: 0 0 60px 0; min-width: 400px; float: right; }
+	ul.timeline li { position: relative; margin: 0 0 2% 0; padding: 0; }	
+
+		div.dot { color:#888; position: absolute; top: 50%; left: -21px; margin: -20px 0 0 0; padding: 0; width: 40px; height: 40px; font-size: 40px; line-height: 1em; text-align: center;  }
+		div.release-info { margin-left: 5%; padding: 0.5%;  }
+			.release-info h4 { font-size: 18px; line-height: 18px; margin: 0; padding: 0; color:#777;}
+			.release-info h4:after { content: ':';}
+			.release-info h5 { font-size: 28px; color:#ccc; }
+	
+	ul.timeline li:first-child { }
+		ul.timeline li:first-child div.dot { top: 0; left: -31px; margin: -30px 0 0 0; font-size: 60px; width: 60px; height: 60px; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.5);}
+		ul.timeline li:first-child div.release-info {  position: relative; top: -30px; margin-bottom: -30px; text-shadow: 0 1px rgba(0, 0, 0, .83);  } 
+		ul.timeline li:first-child h4 { color:#ccc; }
+		ul.timeline li:first-child h5 { font-size: 35px; color:#fff;  font-weight: bold;}
+
+	ul.timeline li:last-child { margin-bottom: -50px; }
+		ul.timeline li:last-child div.dot { top: 0; margin: 0; color: #444; }
+	
+
+
+.row { background: #000 url('images/bg-airport.gif') center center repeat-x; padding: 15px 2%; border: 1px solid #111;  border-radius: 10px; margin: 2% 0; box-shadow: 0 2px 5px  rgba(0,0,0,0.5); position: relative; font-size: 40px; line-height: 30px; height: 30px; font-weight: bold; text-shadow: 0 0 3px rgba(0,0,0,0.5); text-transform: uppercase; color:#fff;  }
+	.row .name { margin: 0; padding: 0;  display: inline; font: inherit; }
+	.row .strike { background: url('images/strike-airport.gif') repeat-x; height: 3px; width: 100%; width: 100%; position: absolute; top: 50%; left: 0; margin-top: -1px; opacity: 0.8;}
+
+.team-status { position: relative; margin-bottom: 10px; }
+	.team-status .avatar { width: 60px; height: 60px; float: left; margin-right: 2%; box-shadow: 0 0 5px rgba(0,0,0,0.5); border-radius: 5px; }
+	.team-status .row { float: left; margin: 0 2% 0 0; width: 30%;}
+	.team-status .num { float: left; width: 5%; text-align: center; }
+	.team-status .detail { width: 30%; height: 60px; float: left; font-size: 20px; padding: 0; overflow: hidden; position: relative;}
+		.detail ul { width: 800px; padding: 0; margin: 0 2%; }
+		.detail li { display: inline; font-size: 30px; line-height: 60px; margin-right: 10px; }
+		.detail .ticket { color: #fff; }
+		.detail .ticket-owner { margin-right: 60px;}
+
+.module-holder .module { float: left; margin: 5% 2% 5% 0; opacity: 0.95;}
+
+.module { padding: 5% 0;  background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#101010)); border-radius: 20px; text-align: center; }
+	.module .num { font-size: 80px; line-height: 70px;  font-weight: bold; color: #fff; }
+	.module .pct { font-weight: normal;}
+	.module label { font-size: 18px; text-shadow:  0 -2px 0 rgba(0,0,0,0.2); color:#888;}

@@ -1,0 +1,9 @@
+
+/* Clearfix fix for IE only */
+.clearfix { zoom: 1; }
+
+/* Example of opacity fix for IE Browser */
+.change_opacity { opacity: 0.5;  filter: alpha(opacity = 50); }
+
+/* Bicubic resizing of images */
+img { -ms-interpolation-mode: bicubic; }
